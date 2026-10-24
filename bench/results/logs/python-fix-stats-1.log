@@ -1,0 +1,58 @@
+exit=0 timed_out=False seconds=14.9
+
+initial check FAILED:
+    $ python3 test_stats.py
+    exit 1
+    Traceback (most recent call last):
+      File "/private/var/folders/k_/pc02dxk95053cg_qjgqph9c40000gn/T/fmbench-fix-stats-uv3141e8/test_stats.py", line 3, in <module>
+        assert mean([2, 4, 6]) == 4, f"mean([2,4,6]) gave {mean([2,4,6])}, expected 4"
+               ^^^^^^^^^^^^
+[1] read_file stats.py
+    -> def mean(values):
+           total = 0
+           for v in values:
+               total += v
+           return total / (len(values) + 1)
+       
+       
+       def clamp(x, lo, hi):
+           if x < lo:
+               return lo
+           if x > hi:
+               return lo
+           return x
+       
+       
+       def is_even(n):
+           return n % 2 == 1
+       
+[2] edit_lines stats.py 5 5 return total / len(values)
+    -> edited stats.py lines 5-5
+       Check FAILED:
+       $ python3 test_stats.py
+       exit 1
+       Traceback (most recent call last):
+         File "/private/var/folders/k_/pc02dxk95053cg_qjgqph9c40000gn/T/fmbench-fix-stats-uv3141e8/test_stats.py", line 4, in <module>
+           assert clamp(15, 0, 10) == 10, f"clamp(15,0,10) gave {clamp(15,0,10)}, expected 10"
+                  ^^^^^^^^^^^^^^^^^^
+[3] edit_lines stats.py 8 12 def clamp(x, lo, hi):\n    if x < lo:\n        return lo\n  
+    -> edited stats.py lines 8-12
+       Check FAILED:
+       $ python3 test_stats.py
+       exit 1
+       Traceback (most recent call last):
+         File "/private/var/folders/k_/pc02dxk95053cg_qjgqph9c40000gn/T/fmbench-fix-stats-uv3141e8/test_stats.py", line 6, in <module>
+           assert is_even(4) is True, "is_even(4) should be True"
+                  ^^^^^^^^^^^^^^^^^^
+       AssertionError: is_e
+[4] edit_lines stats.py 17 18 def is_even(n):\n    return n % 2 == 0
+    -> edited stats.py lines 17-18
+       Check PASSED:
+       $ python3 test_stats.py
+       exit 0
+       all tests passed
+check passed after 4 step(s)
+
+
+--- final check ---
+all tests passed

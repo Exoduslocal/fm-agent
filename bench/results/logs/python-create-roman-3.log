@@ -1,0 +1,30 @@
+exit=0 timed_out=False seconds=7.6
+
+initial check FAILED:
+    $ python3 test_roman.py
+    exit 1
+    Traceback (most recent call last):
+      File "/private/var/folders/k_/pc02dxk95053cg_qjgqph9c40000gn/T/fmbench-create-roman-3zzwh9oj/test_roman.py", line 1, in <module>
+        from roman import to_roman
+    ModuleNotFoundError: No module named 'roman'
+[1] read_file test_roman.py
+    -> from roman import to_roman
+       
+       assert to_roman(1) == "I"
+       assert to_roman(4) == "IV"
+       assert to_roman(9) == "IX"
+       assert to_roman(58) == "LVIII"
+       assert to_roman(1994) == "MCMXCIV"
+       print("all tests passed")
+       
+[2] write_file roman.py
+    -> wrote roman.py
+       Check PASSED:
+       $ python3 test_roman.py
+       exit 0
+       all tests passed
+check passed after 2 step(s)
+
+
+--- final check ---
+all tests passed

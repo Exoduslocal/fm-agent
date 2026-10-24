@@ -1,0 +1,30 @@
+exit=0 timed_out=False seconds=3.4
+
+[round 1]
+  [write_file] fizz.py
+    -> wrote fizz.py
+initial check FAILED:
+$ python3 fizz.py | diff - expected.txt
+exit 1
+/Library/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python: can't open file '/private/var/folders/k_/pc02dxk95053cg_qjgqph9c40000gn/T/fmbench-fizzbuzz-w919a1wv/fizz.py': [Errno 2] No such file or directory
+0a1,15
+> 1
+> 2
+> Fizz
+> 4
+> Buzz
+> Fizz
+> 7
+> 8
+> Fizz
+> Buzz
+> 11
+> Fizz
+> 13
+> 14
+> FizzBuzz
+check passed after 1 round(s)
+
+
+--- final check ---
+

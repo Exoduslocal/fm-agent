@@ -1,0 +1,8 @@
+{
+  "split": "dev",
+  "description": "Find and fix a single bug among several correct functions",
+  "prompt": "textutils.py has a bug and test_textutils.py fails. Fix the bug in textutils.py without breaking the other functions.",
+  "check": "python3 test_textutils.py",
+  "verify": "python3 hidden_textutils.py",
+  "target": "textutils.py"
+}

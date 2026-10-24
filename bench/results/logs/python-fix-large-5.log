@@ -1,0 +1,37 @@
+exit=0 timed_out=False seconds=8.7
+
+initial check FAILED:
+    $ python3 test_toolkit.py
+    exit 1
+    Traceback (most recent call last):
+      File "/private/var/folders/k_/pc02dxk95053cg_qjgqph9c40000gn/T/fmbench-fix-large-j4g8mfgw/test_toolkit.py", line 30, in <module>
+        assert rotate_list([1, 2, 3, 4, 5], 2) == [4, 5, 1, 2, 3], f"rotate_list([1, 2, 3, 4, 5], 2) gave
+[1] read_file toolkit.py
+    -> """Small general-purpose helpers."""
+       
+       
+       def clamp(x, lo, hi):
+           """Return x limited to the range [lo, hi].
+       
+           If x is below lo the result is lo; if x is above hi the result is hi.
+           """
+           if x < lo:
+               return lo
+           if x > hi:
+               return hi
+           return x
+       
+       
+       def lerp(a, b, t):
+    
+[2] edit_lines toolkit.py 186 192 def rotate_list(items, k):\n    """Rotate items to the right
+    -> edited toolkit.py lines 186-192
+       Check PASSED:
+       $ python3 test_toolkit.py
+       exit 0
+       all tests passed
+check passed after 2 step(s)
+
+
+--- final check ---
+all tests passed

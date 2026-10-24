@@ -1,0 +1,37 @@
+exit=0 timed_out=False seconds=9.2
+
+initial check FAILED:
+    $ python3 test_mathutils.py
+    exit 1
+    Traceback (most recent call last):
+      File "/private/var/folders/k_/pc02dxk95053cg_qjgqph9c40000gn/T/fmbench-add-function-88ubl2hr/test_mathutils.py", line 1, in <module>
+        from mathutils import mean, clamp, median
+    ImportError: cannot import name 'median' from 'ma
+[1] list_dir ./
+    -> mathutils.py
+       test_mathutils.py
+[2] read_file mathutils.py
+    -> def mean(values):
+           return sum(values) / len(values)
+       
+       
+       def clamp(x, lo, hi):
+           if x < lo:
+               return lo
+           if x > hi:
+               return hi
+           return x
+       
+[3] read_file mathutils.py
+    -> You already did this exact action. Do something different.
+[4] write_file mathutils.py
+    -> wrote mathutils.py
+       Check PASSED:
+       $ python3 test_mathutils.py
+       exit 0
+       all tests passed
+check passed after 4 step(s)
+
+
+--- final check ---
+all tests passed

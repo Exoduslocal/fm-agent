@@ -1,0 +1,8 @@
+{
+  "split": "dev",
+  "description": "Fix three independent bugs in one file",
+  "prompt": "stats.py has bugs and test_stats.py fails. Fix the bugs in stats.py.",
+  "check": "python3 test_stats.py",
+  "verify": "python3 hidden_stats.py",
+  "target": "stats.py"
+}

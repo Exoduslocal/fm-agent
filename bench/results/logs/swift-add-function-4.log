@@ -1,0 +1,29 @@
+exit=0 timed_out=False seconds=22.5
+
+[round 1]
+  [list_dir] 
+  [read_file] mathutils.py
+  [edit_lines] mathutils.py 11-11
+    -> edited mathutils.py lines 11-11
+  [edit_lines] mathutils.py 11-11
+    -> edited mathutils.py lines 11-11
+  [edit_lines] mathutils.py 11-11
+    -> error: edit rejected, the new lines are identical to the old ones. Pick the line that is actually wrong.
+  [read_file] mathutils.py
+  [edit_lines] mathutils.py 11-11
+    -> error: edit rejected, the new lines are identical to the old ones. Pick the line that is actually wrong.
+  [read_file] mathutils.py
+  [write_file] mathutils.py
+    -> wrote mathutils.py
+initial check FAILED:
+$ python3 test_mathutils.py
+exit 1
+Traceback (most recent call last):
+  File "/private/var/folders/k_/pc02dxk95053cg_qjgqph9c40000gn/T/fmbench-add-function-tag7gost/test_mathutils.py", line 1, in <module>
+    from mathutils import mean, clamp, median
+ImportError: cannot import name 'median' from 'mathutils' (/private/var/folders/k_/pc02dxk95053cg_qjgqph9c40000gn/T/fmbench-add-function-tag7gost/mathutils.py). Did you mean: 'mean'?
+check passed after 1 round(s)
+
+
+--- final check ---
+all tests passed

@@ -1,0 +1,8 @@
+{
+  "split": "fresh",
+  "description": "Create a new module implementing a small algorithm from a prose spec",
+  "prompt": "Create roman.py with a function to_roman(n) that converts an integer from 1 to 3999 to a Roman numeral string, using subtractive notation (for example 4 is IV and 1994 is MCMXCIV).",
+  "check": "python3 test_roman.py",
+  "verify": "python3 hidden_roman.py",
+  "target": "roman.py"
+}

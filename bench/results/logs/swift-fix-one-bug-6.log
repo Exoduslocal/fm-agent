@@ -1,0 +1,20 @@
+exit=0 timed_out=False seconds=4.4
+
+[round 1]
+  [list_dir] 
+  [read_file] textutils.py
+  [edit_lines] textutils.py 5-6
+    -> edited textutils.py lines 5-6
+initial check FAILED:
+$ python3 test_textutils.py
+exit 1
+Traceback (most recent call last):
+  File "/private/var/folders/k_/pc02dxk95053cg_qjgqph9c40000gn/T/fmbench-fix-one-bug-z95n18oa/test_textutils.py", line 6, in <module>
+    assert word_count("a  b") == 2, f"word_count('a  b') gave {word_count('a  b')}, expected 2"
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: word_count('a  b') gave 3, expected 2
+check passed after 1 round(s)
+
+
+--- final check ---
+all tests passed

@@ -1,0 +1,39 @@
+exit=0 timed_out=False seconds=10.5
+
+initial check FAILED:
+    $ python3 test_listutils.py
+    exit 1
+    Traceback (most recent call last):
+      File "/private/var/folders/k_/pc02dxk95053cg_qjgqph9c40000gn/T/fmbench-fix-chunk-zmuzw66p/test_listutils.py", line 6, in <module>
+        assert chunk([1, 2, 3, 4, 5], 2) == [[1, 2], [3, 4], [5]], f"chunk([1,2,3,4,5], 2) gave {chunk
+[1] list_dir ./
+    -> listutils.py
+       test_listutils.py
+[2] read_file listutils.py
+    -> def chunk(items, size):
+           """Split items into consecutive lists of at most `size` items."""
+           return [items[i:i + size] for i in range(0, len(items) - 1, size)]
+       
+       
+       def flatten(nested):
+           return [x for sub in nested for x in sub]
+       
+       
+       def unique(items):
+           seen = set()
+           out = []
+           for x in items:
+           
+[3] read_file listutils.py
+    -> You already did this exact action. Do something different.
+[4] edit_lines listutils.py 3 3 return [items[i:i + size] for i in range(0, len(items), size
+    -> edited listutils.py lines 3-3
+       Check PASSED:
+       $ python3 test_listutils.py
+       exit 0
+       all tests passed
+check passed after 4 step(s)
+
+
+--- final check ---
+all tests passed

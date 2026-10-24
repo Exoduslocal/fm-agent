@@ -1,0 +1,8 @@
+{
+  "split": "dev",
+  "description": "Create a new file from a one-line spec (no held-out tests: the output is fully specified)",
+  "prompt": "Create fizz.py that prints FizzBuzz for 1 to 15, one value per line.",
+  "check": "python3 fizz.py | diff - expected.txt",
+  "verify": null,
+  "target": "fizz.py"
+}

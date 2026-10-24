@@ -1,0 +1,6 @@
+exit=0 timed_out=False seconds=4.3
+
+[1] write_file (one shot)
+
+--- final check ---
+all tests passed

@@ -1,0 +1,65 @@
+exit=0 timed_out=False seconds=21.8
+
+initial check FAILED:
+    $ python3 test_mathutils.py
+    exit 1
+    Traceback (most recent call last):
+      File "/private/var/folders/k_/pc02dxk95053cg_qjgqph9c40000gn/T/fmbench-add-function-epqdqvl5/test_mathutils.py", line 1, in <module>
+        from mathutils import mean, clamp, median
+    ImportError: cannot import name 'median' from 'ma
+[1] list_dir ./
+    -> mathutils.py
+       test_mathutils.py
+[2] read_file mathutils.py
+    -> def mean(values):
+           return sum(values) / len(values)
+       
+       
+       def clamp(x, lo, hi):
+           if x < lo:
+               return lo
+           if x > hi:
+               return hi
+           return x
+       
+[3] edit_lines mathutils.py 11 13     return sorted(values)[len(values)//2]
+    -> edited mathutils.py lines 11-13
+       Check FAILED:
+       $ python3 test_mathutils.py
+       exit 1
+       Traceback (most recent call last):
+         File "/private/var/folders/k_/pc02dxk95053cg_qjgqph9c40000gn/T/fmbench-add-function-epqdqvl5/test_mathutils.py", line 1, in <module>
+           from mathutils import mean, clamp, median
+       ImportError: cannot import name 'median' from 'mathuti
+[4] read_file mathutils.py
+    -> def mean(values):
+           return sum(values) / len(values)
+       
+       
+       def clamp(x, lo, hi):
+           if x < lo:
+               return lo
+           if x > hi:
+               return hi
+           return x
+           return sorted(values)[len(values)//2]
+[5] edit_lines mathutils.py 11 11     return sorted(values)[len(values)//2] if len(values) % 2
+    -> edited mathutils.py lines 11-11
+       Check FAILED:
+       $ python3 test_mathutils.py
+       exit 1
+       Traceback (most recent call last):
+         File "/private/var/folders/k_/pc02dxk95053cg_qjgqph9c40000gn/T/fmbench-add-function-epqdqvl5/test_mathutils.py", line 1, in <module>
+           from mathutils import mean, clamp, median
+       ImportError: cannot import name 'median' from 'mathuti
+[6] write_file mathutils.py
+    -> wrote mathutils.py
+       Check PASSED:
+       $ python3 test_mathutils.py
+       exit 0
+       all tests passed
+check passed after 6 step(s)
+
+
+--- final check ---
+all tests passed

@@ -1,0 +1,11 @@
+exit=1 timed_out=False seconds=11.6
+
+Error: The session's transcript exceeded the model's context size.
+
+
+--- final check ---
+Traceback (most recent call last):
+  File "/private/var/folders/k_/pc02dxk95053cg_qjgqph9c40000gn/T/fmbench-fix-large-istnixc4/hidden_toolkit.py", line 5, in <module>
+    assert rotate_list([1, 2, 3, 4, 5], 1) == [5, 1, 2, 3, 4]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,21 @@
+exit=0 timed_out=False seconds=6.4
+
+[round 1]
+  [list_dir] 
+  [read_file] mathutils.py
+[round 2]
+  [write_file] mathutils.py
+    -> wrote mathutils.py
+initial check FAILED:
+$ python3 test_mathutils.py
+exit 1
+Traceback (most recent call last):
+  File "/private/var/folders/k_/pc02dxk95053cg_qjgqph9c40000gn/T/fmbench-add-function-pk71qtt9/test_mathutils.py", line 1, in <module>
+    from mathutils import mean, clamp, median
+ImportError: cannot import name 'median' from 'mathutils' (/private/var/folders/k_/pc02dxk95053cg_qjgqph9c40000gn/T/fmbench-add-function-pk71qtt9/mathutils.py). Did you mean: 'mean'?
+model: The `median` function is missing from `mathutils.py`. Let's add it while preserving the existing functions.
+check passed after 2 round(s)
+
+
+--- final check ---
+all tests passed

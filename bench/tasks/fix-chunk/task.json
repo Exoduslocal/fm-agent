@@ -1,0 +1,8 @@
+{
+  "split": "fresh",
+  "description": "Fix an off-by-one in one function of a three-function module",
+  "prompt": "listutils.py has a bug and test_listutils.py fails. Fix the bug in listutils.py without breaking the other functions.",
+  "check": "python3 test_listutils.py",
+  "verify": "python3 hidden_listutils.py",
+  "target": "listutils.py"
+}

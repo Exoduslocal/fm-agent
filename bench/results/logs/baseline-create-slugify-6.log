@@ -1,0 +1,10 @@
+exit=0 timed_out=False seconds=1.4
+
+[1] write_file (one shot)
+
+--- final check ---
+Traceback (most recent call last):
+  File "/private/var/folders/k_/pc02dxk95053cg_qjgqph9c40000gn/T/fmbench-create-slugify-owatqrk_/hidden_slugify.py", line 6, in <module>
+    assert slugify("A_B") == "a-b"
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

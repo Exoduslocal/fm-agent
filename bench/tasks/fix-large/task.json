@@ -1,0 +1,8 @@
+{
+  "split": "scale",
+  "description": "Fix one bug in a ~500-line, ~3.4k-token module. A one-shot rewrite needs the file in the prompt and again in the reply, which cannot fit in the 4096-token window.",
+  "prompt": "toolkit.py has a bug and test_toolkit.py fails. Fix the bug in toolkit.py without breaking the other functions.",
+  "check": "python3 test_toolkit.py",
+  "verify": "python3 hidden_toolkit.py",
+  "target": "toolkit.py"
+}

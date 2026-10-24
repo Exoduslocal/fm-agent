@@ -1,0 +1,20 @@
+exit=0 timed_out=False seconds=5.3
+
+[round 1]
+  [list_dir] 
+  [read_file] listutils.py
+  [edit_lines] listutils.py 1-3
+    -> edited listutils.py lines 1-3
+initial check FAILED:
+$ python3 test_listutils.py
+exit 1
+Traceback (most recent call last):
+  File "/private/var/folders/k_/pc02dxk95053cg_qjgqph9c40000gn/T/fmbench-fix-chunk-yyemdamg/test_listutils.py", line 6, in <module>
+    assert chunk([1, 2, 3, 4, 5], 2) == [[1, 2], [3, 4], [5]], f"chunk([1,2,3,4,5], 2) gave {chunk([1,2,3,4,5], 2)}, expected [[1, 2], [3, 4], [5]]"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: chunk([1,2,3,4,5], 2) gave [[1, 2], [3, 4]], expected [[1, 2], [3, 4], [5]]
+check passed after 1 round(s)
+
+
+--- final check ---
+all tests passed

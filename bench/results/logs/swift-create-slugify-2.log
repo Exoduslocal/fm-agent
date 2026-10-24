@@ -1,0 +1,23 @@
+exit=0 timed_out=False seconds=4.6
+
+[round 1]
+  [list_dir] 
+  [read_file] slugify.py
+  [write_file] slugify.py
+    -> wrote slugify.py
+initial check FAILED:
+$ python3 test_slugify.py
+exit 1
+Traceback (most recent call last):
+  File "/private/var/folders/k_/pc02dxk95053cg_qjgqph9c40000gn/T/fmbench-create-slugify-95_zqbi9/test_slugify.py", line 1, in <module>
+    from slugify import slugify
+ModuleNotFoundError: No module named 'slugify'
+check passed after 1 round(s)
+
+
+--- final check ---
+Traceback (most recent call last):
+  File "/private/var/folders/k_/pc02dxk95053cg_qjgqph9c40000gn/T/fmbench-create-slugify-95_zqbi9/hidden_slugify.py", line 6, in <module>
+    assert slugify("A_B") == "a-b"
+           ^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

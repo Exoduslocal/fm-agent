@@ -1,0 +1,24 @@
+exit=0 timed_out=False seconds=11.1
+
+[round 1]
+  [list_dir] .
+  [read_file] stats.py
+  [edit_lines] stats.py 1-5
+    -> edited stats.py lines 1-5
+  [edit_lines] stats.py 8-13
+    -> edited stats.py lines 8-13
+  [edit_lines] stats.py 16-17
+    -> edited stats.py lines 16-17
+initial check FAILED:
+$ python3 test_stats.py
+exit 1
+Traceback (most recent call last):
+  File "/private/var/folders/k_/pc02dxk95053cg_qjgqph9c40000gn/T/fmbench-fix-stats-vo24wjz7/test_stats.py", line 3, in <module>
+    assert mean([2, 4, 6]) == 4, f"mean([2,4,6]) gave {mean([2,4,6])}, expected 4"
+           ^^^^^^^^^^^^^^^^^^^^
+AssertionError: mean([2,4,6]) gave 3.0, expected 4
+check passed after 1 round(s)
+
+
+--- final check ---
+all tests passed

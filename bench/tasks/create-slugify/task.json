@@ -1,0 +1,8 @@
+{
+  "split": "dev",
+  "description": "Create a new module with a function from a prose spec",
+  "prompt": "Create slugify.py with a function slugify(text) that lowercases the text, replaces each run of characters that are not letters or digits with a single hyphen, and strips leading and trailing hyphens.",
+  "check": "python3 test_slugify.py",
+  "verify": "python3 hidden_slugify.py",
+  "target": "slugify.py"
+}

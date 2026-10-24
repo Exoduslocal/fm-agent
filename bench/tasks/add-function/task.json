@@ -1,0 +1,8 @@
+{
+  "split": "dev",
+  "description": "Add a function to an existing, already-correct module without breaking it",
+  "prompt": "Add a function median(values) to mathutils.py that returns the median of a non-empty list of numbers. Do not change the existing functions.",
+  "check": "python3 test_mathutils.py",
+  "verify": "python3 hidden_mathutils.py",
+  "target": "mathutils.py"
+}
